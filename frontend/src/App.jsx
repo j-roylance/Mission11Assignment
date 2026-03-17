@@ -1,4 +1,4 @@
-// Main App component - renders the header and bowler table
+// Main app component for the Mission 11 UI
 
 import React from 'react'
 import './App.css'
@@ -8,9 +8,9 @@ import BooksList from './booksList';
 function App() {
   return (
     <>
-      {/* Page heading describing the app */}
+      {/* Static page heading/content */}
       <Header/>
-      {/* Table of bowlers fetched from the API */}
+      {/* Interactive table with sorting + pagination */}
       <BooksList/>
     </>
   )

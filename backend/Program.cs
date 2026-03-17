@@ -6,7 +6,7 @@ using Mission10Assignment.Data;
 // Create the web application builder
 var builder = WebApplication.CreateBuilder(args);
 
-// Register MVC controllers and views
+// Register API controllers (and MVC support if needed)
 builder.Services.AddControllersWithViews();
 
 // Configure CORS to allow the React frontend (running on port 5173) to call this API
@@ -39,9 +39,9 @@ app.UseRouting();
 app.UseCors();        // Enable CORS for cross-origin API requests from React
 app.UseAuthorization();
 
-// Map static files, API controllers, and MVC routes
+// Map static files, API controllers, and fallback MVC route
 app.MapStaticAssets();
-app.MapControllers(); // Maps [ApiController] routes (e.g. /api/Bowling)
+app.MapControllers(); // Maps [ApiController] routes (e.g. /api/Books)
 app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}")

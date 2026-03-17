@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 function BooksList() {
-  const [books, setBooks] = useState([]); // List of books
+  // Component state for full data set and UI controls
+  const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(5) 
-  const [sortDirection, setSortDirection] = useState('asc') // or 'desc'
+  const [sortDirection, setSortDirection] = useState('asc')
 
+  // Load all books once when component mounts
   useEffect(() => {
     fetch('/api/Books')
       .then(res => (res.ok ? res.json() : Promise.reject(res)))
@@ -13,7 +15,7 @@ function BooksList() {
       .catch(() => setBooks([]))
   }, [])
 
-// create a sorted copy so we don't mutate original state
+// Create a sorted copy so original state is never mutated
 const sortedBooks = [...books].sort((a, b) => {
   const titleA = (a.title || '').toLowerCase()
   const titleB = (b.title || '').toLowerCase()
@@ -25,6 +27,7 @@ const sortedBooks = [...books].sort((a, b) => {
 
 const totalPages = Math.ceil(sortedBooks.length / pageSize) || 1
 
+// Slice sorted data to only render rows for current page
 const startIndex = (currentPage - 1) * pageSize
 const currentBooks = sortedBooks.slice(startIndex, startIndex + pageSize)
   
@@ -50,7 +53,8 @@ const currentBooks = sortedBooks.slice(startIndex, startIndex + pageSize)
           onChange={(e) => {
             const newSize = Number(e.target.value)
             setPageSize(newSize)
-            setCurrentPage(1) // reset to first page when page size changes
+            // Reset to first page to avoid landing on a now-invalid page number
+            setCurrentPage(1)
           }}
         >
           <option value={5}>5</option>
@@ -62,6 +66,7 @@ const currentBooks = sortedBooks.slice(startIndex, startIndex + pageSize)
         
         <thead>
           <tr>
+            {/* Clicking Title toggles alphabetical sort direction */}
                       <th style={{ cursor: 'pointer' }} onClick={() => setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))}
             >
               Title {sortDirection === 'asc' ? '▲' : '▼'}
