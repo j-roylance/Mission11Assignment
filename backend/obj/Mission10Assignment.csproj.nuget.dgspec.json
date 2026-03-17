@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission10Assignment/Mission10Assignment/backend/Mission10Assignment.csproj": {}
+    "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission11Assignment/Mission11Assignment/backend/Mission10Assignment.csproj": {}
   },
   "projects": {
-    "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission10Assignment/Mission10Assignment/backend/Mission10Assignment.csproj": {
+    "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission11Assignment/Mission11Assignment/backend/Mission10Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission10Assignment/Mission10Assignment/backend/Mission10Assignment.csproj",
+        "projectUniqueName": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission11Assignment/Mission11Assignment/backend/Mission10Assignment.csproj",
         "projectName": "Mission10Assignment",
-        "projectPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission10Assignment/Mission10Assignment/backend/Mission10Assignment.csproj",
+        "projectPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission11Assignment/Mission11Assignment/backend/Mission10Assignment.csproj",
         "packagesPath": "/Users/jensroylance/.nuget/packages/",
-        "outputPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission10Assignment/Mission10Assignment/backend/obj/",
+        "outputPath": "/Users/jensroylance/Desktop/School Stuff/Winter 2026/IS413 - Hilton/Assignments/Mission11Assignment/Mission11Assignment/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jensroylance/.nuget/NuGet/NuGet.Config"

@@ -5,12 +5,11 @@ using Mission10Assignment.Models;
 
 namespace Mission10Assignment.Data;
 
-public class BowlingLeagueContext : DbContext
+public class BookstoreContext : DbContext
 {
-    public BowlingLeagueContext(DbContextOptions<BowlingLeagueContext> options)
+    public BookstoreContext(DbContextOptions<BookstoreContext> options)
         : base(options) { }
 
     // DbSets represent the tables we can query
-    public DbSet<Bowler> Bowlers { get; set; }
-    public DbSet<Team> Teams { get; set; }
+    public DbSet<Book> Books { get; set; }
 }
